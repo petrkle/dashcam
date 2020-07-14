@@ -1,0 +1,18 @@
+[dirs]
+
+in  = /run/media/mio/0123-45678/Video/F
+out = /mnt/data/dashcam
+
+[videos]
+
+suffix          = MP4
+split           = 60
+splittolerance  = 10
+
+[geo]
+
+gpssuffix = NMEA
+geocodingapi = http://localhost:7070
+
+skip[] = "home:49.5409939:15.3556506:0.5"
+skip[] = "work:49.4304003:15.2228817:0.5"
