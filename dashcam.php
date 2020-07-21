@@ -52,7 +52,7 @@ foreach ($parts as $part) {
         if ($videopart > 1) {
             $fromplace = geodata($first);
             $toplace = geodata($last);
-            $video = $config['out']."/$date-".strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $fromplace['start']['info']->address->suburb))."-".strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $toplace['end']['info']->address->suburb)).".mkv";
+            $video = $config['out']."/$date-".preg_replace('/ /', '-', strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $fromplace['start']['info']->address->suburb)))."-".preg_replace('/ /', '-', strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $toplace['end']['info']->address->suburb))).".mkv";
 
             file_put_contents(WORK, $video);
 
