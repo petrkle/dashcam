@@ -1,6 +1,8 @@
 #!/usr/bin/php
 <?php
 
+chdir(__DIR__);
+
 require('func.php');
 
 define("WORK", '/tmp/'.basename(__FILE__).'.processing');
